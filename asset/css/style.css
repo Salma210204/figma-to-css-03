@@ -96,3 +96,75 @@ a {
 .header__action--login {
   margin-right: 7px;
 }
+
+/* =================== HERO =================== */
+.hero {
+  display: flex;
+  align-items: center;
+  padding-top: 76px;
+}
+
+.hero__content {
+  width: 44%; /* 517/1170=0.44..*100=44% */
+}
+
+.hero__media {
+  flex: 1; /* chiếm toàn bộ phần còn lại */
+}
+
+.hero__heading {
+  color: #fff;
+  font-size: 7rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.14; /* 114.286% */
+  letter-spacing: -1.4px;
+}
+
+.hero__desc {
+  margin-top: 22px;
+  color: #c9d2da;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.66; /* 166.667% */
+}
+
+.hero__row {
+  margin-top: 38px;
+  display: flex;
+  align-items: center;
+  /* => dùng 2 thuộc tính này vì 2 thẻ này là inline nó sẽ có khoảng cách giữa giữa 2 thẻ
+, khi có flex sẽ mất đi khoảng cách đó */
+  column-gap: 38px;
+}
+
+.hero__phone {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.67; /* 166.667% */
+}
+
+.hero__images {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero__img {
+  border-radius: 6px;
+  object-fit: cover; /* để ảnh ko bị méo */
+}
+
+.hero__img-large {
+  width: 33rem;
+  height: 54rem;
+  margin-right: -6px; /* (ảnh gốc) 210 - 204 (ảnh sau khi bị đè) = 6px */
+  z-index: 1; /* vì ảnh này vị trí nằm trc ảnh nhỏ nên nó sẽ bị nằm sau ảnh nhỏ, dùng thuộc tính này để nó nằm trên */
+}
+
+.hero__img-small {
+  width: 21rem;
+  height: 41rem;
+}
