@@ -328,3 +328,54 @@ a {
   font-weight: 400;
   line-height: 1.75; /* 175% */
 }
+
+/* ============================ ABOUT ============================== */
+.about {
+  margin-top: 85px;
+  padding: 85px 0 206px;
+  /* ban đầu bottom cũng 85px, nhưng vì ảnh nhỏ dùng absolute nên nó bị lôi ra khỏi luồng,
+  lúc này bottom 85 chỉ tính từ ảnh lớn nên ảnh nhỏ bị lồi ra khỏi khùng,
+  xem trên thiết kế thì bottom ảnh nhỏ là 121px nên 85 cộng thêm 121 nữa 206*/
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about__media {
+  width: 49%; /* 570/1170=0.48*100=48,...=49% */
+}
+
+.about__content {
+  width: 40%; /*470/1170=0.40*100=40% */
+}
+
+.about__images {
+  position: relative;
+}
+
+.about__img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.about__img--large {
+  display: flex; /* vì nó là thẻ inline nên nó sẽ có khoảng hở, dùng dflex để ko còn khoảng hở */
+  width: 512px;
+  height: 370px;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.07);
+}
+
+.about__img--small {
+  position: absolute;
+  top: 121px;
+  left: 238px;
+  width: 332px;
+  height: 370px;
+}
+
+.about-content__btn {
+  margin-top: 38px;
+}
