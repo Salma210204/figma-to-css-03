@@ -16,6 +16,15 @@ body {
 }
 
 /* =================== COMMON =================== */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  /* Vì những thẻ này thường ko chịu kế thừa từ cha nên ta sẽ thêm mặc định để nó kế thừa */
+}
+
 .container {
   width: 1170px;
   max-width: calc(100% - 48px);
@@ -625,9 +634,11 @@ a {
   color: #2e80ce;
 }
 
-/* ============================= CTA ================================ */
+/* ============================= APPOINTMENT ================================ */
 .appointment {
-  margin: 85px 0;
+  margin-top: 85px; /* ban đầu là trên dưới 85
+  sau đổi lại chỉ trên 85 vì nếu dưới 85 khi gặp khối sau cũng 85 thì nó ko cộng nhau
+  mà nó sẽ chỉ lấy tk nào lớn hơn */
 }
 
 .appointment__inner {
@@ -652,4 +663,138 @@ a {
 
 .appointment__btn {
   margin-top: 38px;
+}
+
+/* ============================= FOOTER ================================ */
+.footer {
+  margin-top: 170px;
+  padding-top: 100px;
+  background: #10375c;
+  font-family:
+    "Open Sans", sans-serif; /* để nó kế thừa tất cả font theo cha footer */
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 0.4fr 0.4fr 1fr; /* (2 cột giữa)134/336(cột đầu&cuối) = 0.4  */
+  column-gap: 78px;
+}
+
+/* COLUMN 1 */
+.footer__desc {
+  margin-top: 21px;
+  /* width: 336px; */
+  color: #a9b3bb;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+}
+
+/* COLUMN 2 */
+.footer__heading {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.75; /* 175% */
+}
+
+.footer__list {
+  margin: 20px 0 28px;
+}
+
+.footer__item {
+  margin-bottom: 10px;
+}
+
+.footer__link {
+  color: #a9b3bb;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+  white-space: nowrap; /* ko bẻ chữ xuống hàng */
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+/* COLUMN 4 */
+.footer__social {
+  display: flex;
+  margin: 20px 0 28px;
+  column-gap: 10px;
+}
+
+.footer__social-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 3 thuộc tính trên căn giữa cho icon đẹp ko méo */
+
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  color: #2e80ce;
+  transition: 0.25s;
+}
+
+.footer__social-btn:hover {
+  background: #2e80ce;
+  color: #fff;
+}
+
+.footer-form {
+  margin-top: 10px;
+  display: flex;
+  column-gap: 12px;
+}
+
+.footer-form__input {
+  width: 212px;
+  height: 46px;
+  border-radius: 4px;
+  border: 1px solid #406181;
+  background: #10375c;
+  outline: none; /* bỏ viền thừa đi */
+  color: #fff;
+  padding: 10px;
+}
+
+.footer-form__input::placeholder {
+  color: #9ca8b1;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.footer-form__submit {
+  width: 108px;
+  height: 46px;
+  border-radius: 4px;
+  background: #2e80ce;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.86; /* 185.714% */
+  border: none; /* bỏ viền đi */
+}
+
+.footer-form__submit:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* COPY RIGHT */
+.footer__copyright {
+  border-top: 1px solid #406181;
+}
+
+.footer__copyright-text {
+  padding: 28px 0 42px;
+  color: #aab3ba;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
 }
