@@ -1,0 +1,59 @@
+/* PC */
+@media (min-width: 992px) {
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 991.98px) {
+  /* 1. Ẩn thanh navbar đi */
+  .navbar {
+    display: none;
+  }
+  /* 2. chuyển logo vào giữa */
+  .header-top {
+    position: relative;
+  }
+
+  /* 3. căn lại vị trí của logo */
+  .header__logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  /* 4. căn lại vị trí của menu icon */
+  .menu-header__icon {
+    position: absolute;
+    top: 36px;
+    left: 27px;
+    color: #fff;
+    width: 24px;
+  }
+
+  /* 5. căn lại vị trí của overlay */
+  .overlay {
+    position: fixed; /* fix cứng cho nó */
+    inset: 0; /* top: 0; left: 0; right: 0; bottom: 0; 
+    tạo ra 1 khung bao quanh cả viewport, cách 4 cạnh là 0*/
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* để nó nằm trên cùng hết all phần tử */
+
+    /* bình thường ẩn nó đi */
+    opacity: 0; /* ẩn nó đi nhưng vẫn chiếm diện tích, vẫn có thể click nó được, nhưng ko click các phần tử phía sau nó dc */
+    visibility: hidden; /* ẩn nó đi và không chiếm diện tích, không thể click nó được, lúc nnày có thể click các phần tử phía sau nó */
+    transition: 0.5s; /* tạo hiệu ứng chuyển đổi khi hiển thị và ẩn đi */
+  }
+
+  /* 6. kiểm tra nếu checkbox được chọn thì hiển thị overlay */
+  #menu-checkbox:checked ~ .overlay {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* TABLET */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* MOBILE */
+@media (max-width: 767.98px) {
+}
