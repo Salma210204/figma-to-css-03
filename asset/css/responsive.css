@@ -1,5 +1,8 @@
 /* PC */
 @media (min-width: 992px) {
+  .mobile-header {
+    display: none;
+  }
 }
 
 /* TABLET AND MOBILE */
@@ -47,6 +50,49 @@
   #menu-checkbox:checked ~ .overlay {
     opacity: 1;
     visibility: visible;
+  }
+
+  /* 7. căn lại vị trí của menu drawer */
+  .menu-drawer {
+    position: fixed;
+    inset: 0 40% 0 0; /* top: 0; right: 40%; bottom: 0; left: 0; */
+    background: #2e1919;
+    z-index: 2; /* để nó nằm trên overlay */
+    transform: translateX(
+      -100%
+    ); /* ẩn nó đi bằng cách dịch chuyển nó sang trái hết */
+    transition: 0.5s; /* tạo hiệu ứng chuyển đổi khi hiển thị và ẩn đi */
+    padding: 60px;
+  }
+
+  /* 8. hiển thị menu drawer khi checkbox được chọn */
+  #menu-checkbox:checked ~ .menu-drawer {
+    transform: translateX(0);
+  }
+
+  /* 9. điều chỉnh close icon */
+  .close__menu {
+    width: 24px;
+    color: #fff;
+  }
+
+  .menu-drawer__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navbar__list--mobile {
+    margin-top: 25px;
+  }
+
+  .navbar__link {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .navbar__link:hover {
+    background-color: #00ffff37;
   }
 }
 
