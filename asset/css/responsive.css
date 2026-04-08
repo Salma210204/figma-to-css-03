@@ -243,6 +243,120 @@
 
   .menu-drawer {
     inset: 0 20% 0 0;
+    padding: 40px;
+  }
+
+  .navbar__item {
+    list-style-type: none;
+  }
+
+  /* vạch ngăn cách */
+  .seperate {
+    border-top: 1.5px solid #929292;
+    margin-top: 10px;
+  }
+
+  .hero__img-large {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__img-small {
+    /* width: 14rem;
+    height: 24rem; */
+    display: none;
+  }
+
+  .hero__heading {
+    font-size: 3rem;
+  }
+
+  .hero__row {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  /* ============= services ==================== */
+  .service {
+    padding: 70px 0;
+  }
+
+  .section-desc {
+    width: 93%;
+  }
+
+  .service__img {
+    height: auto;
+  }
+
+  /* ============= work ==================== */
+  .work__desc {
+    width: 100%;
+  }
+
+  .work-item {
     padding: 20px;
+  }
+
+  /* ============= about ==================== */
+  .about {
+    margin-top: 20px;
+    padding: 40px 0;
+  }
+
+  .section-heading {
+    font-size: 3rem;
+  }
+
+  /* ============= team ==================== */
+  .team__list {
+    grid-template-columns: 1fr;
+  }
+
+  /* ============= install inner ==================== */
+  .install__inner {
+    margin: 40px 0;
+    padding: 0 8px;
+  }
+
+  /* .install__content {
+    width: 250px;
+  } */
+
+  .install__desc {
+    font-size: 1.3rem;
+  }
+
+  /* ============= blog list ==================== */
+  .blog__list {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .blog__heading {
+    text-align: center;
+  }
+
+  /* ============= appointment ==================== */
+  .appointment {
+    margin-top: 20px;
+  }
+
+  .appointment__inner {
+    padding: 30px 5px;
+  }
+
+  /* ============= footer ==================== */
+  .footer {
+    margin-top: 80px;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+
+  .footer__copyright {
+    margin-top: 20px;
   }
 }
